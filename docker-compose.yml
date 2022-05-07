@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  my-nuxt:
+    container_name: "nuxt"
+    image: node:16.15.0
+    volumes:
+      - /g/workspace/test_nuxt:/opt/app/nuxt
+    command: 'tail -F /dev/null'
+    #command: 'mysqld'
+    ports:
+      - "3366:3366"
+    stdin_open: true
+    tty: true
